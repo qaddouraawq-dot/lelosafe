@@ -324,5 +324,43 @@ Muskulatur, Fettgewebe oder X-Beine
 
   reveals.forEach(el => observer.observe(el));
 </script>
+
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  function changeProduct(imageName) {
+    document.getElementById('mainProductImage').src = imageName;
+  }
+
+  function addToCart() {
+    document.getElementById('cartMessage').textContent = "Das Produkt wurde zum Warenkorb hinzugefügt.";
+  }
+
+  const sizeButtons = document.querySelectorAll('.size-btn');
+  sizeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      sizeButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+
+  const colorButtons = document.querySelectorAll('.color-dot');
+  colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      colorButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
