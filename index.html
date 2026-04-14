@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -62,32 +63,55 @@
       </div>
     </div>
   </section>
-</section>
+<section id="shop" class="section shop-section">
+  <div class="container shop-grid">
 
-<section id="shop">
-  <h2>Produkt</h2>
-  <p>LeloSafe Premium Bandage</p>
-  <p>Preis: 89,90 €</p>
+    <div class="shop-image-box reveal">
+      <img id="mainProductImage" src="hero-product.jpg" alt="LeloSafe Bandage" class="shop-main-image">
+    </div>
 
-  <img src="hero-product.jpg" style="width:300px; border-radius:20px;">
+    <div class="shop-info reveal">
+      <p class="section-tag">Produkt</p>
+      <h2>LeloSafe Premium Bandage</h2>
+      <p class="shop-price">89,90 €</p>
 
-  <div>
-    <p>Farben:</p>
-    <button>Beige</button>
-    <button>Schwarz</button>
-    <button>Rosé</button>
-    <button>Brown</button>
+      <p class="shop-text">
+        Diskreter Schutz vor Reibung mit femininem Design, angenehmem Halt
+        und mehrstufig verstellbarem Hakenverschluss.
+      </p>
+
+      <div class="shop-block">
+        <h3>Farben</h3>
+        <div class="color-options">
+          <button class="color-dot active" style="background:#d8c0ab;" onclick="changeProduct('hero-product.jpg')"></button>
+          <button class="color-dot" style="background:#b89b7a;" onclick="changeProduct('product-wear.jpg')"></button>
+          <button class="color-dot" style="background:#f1e6dd;" onclick="changeProduct('flyer-style.jpg')"></button>
+          <button class="color-dot" style="background:#8c745f;" onclick="changeProduct('hero-product.jpg')"></button>
+        </div>
+      </div>
+
+      <div class="shop-block">
+        <h3>Größe</h3>
+        <div class="size-options">
+          <button class="size-btn">XS</button>
+          <button class="size-btn">S</button>
+          <button class="size-btn">M</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">XL</button>
+          <button class="size-btn">XXL</button>
+        </div>
+        <p class="shop-note">Der mehrstufig verstellbare Hakenverschluss erlaubt zusätzlich ca. 3–4 cm Anpassung.</p>
+      </div>
+
+      <div class="shop-actions">
+        <button class="btn btn-primary add-cart-btn" onclick="addToCart()">In den Warenkorb</button>
+        <a href="#groesse" class="btn btn-secondary">Größentabelle</a>
+      </div>
+
+      <p id="cartMessage" class="cart-message"></p>
+    </div>
+
   </div>
-
-  <div>
-    <p>Größe:</p>
-    <button>S</button>
-    <button>M</button>
-    <button>L</button>
-    <button>XL</button>
-  </div>
-
-  <button>In den Warenkorb</button>
 </section>
   <section class="section intro">
     <div class="container narrow center reveal">
