@@ -71,7 +71,7 @@
     <div class="shop-info reveal">
       <p class="section-tag">Produkt</p>
       <h2>LeloSafe Premium Bandage</h2>
-      <img src="product-wear.jpg" class="product-wear-image">
+      <img id="mainProductImage" src="bandage-beige.jpg" alt="LeloSafe Bandage" class="shop-main-image">
       <p class="shop-price">110,00
       €</p>
 
@@ -81,14 +81,14 @@
       </p>
 
       <div class="shop-block">
-        <h3>Farben</h3>
-        <div class="color-options">
-          <button class="color-dot active" style="background:#d8c0ab;" onclick="changeProduct('hero-product.jpg')"></button>
-          <button class="color-dot" style="background:#b89b7a;" onclick="changeProduct('product-wear.jpg')"></button>
-          <button class="color-dot" style="background:#f1e6dd;" onclick="changeProduct('flyer-style.jpg')"></button>
-          <button class="color-dot" style="background:#8c745f;" onclick="changeProduct('hero-product.jpg')"></button>
-        </div>
-      </div>
+  <h3>Farben</h3>
+  <div class="color-options">
+    <button class="color-dot active" style="background:#d8c0ab;" onclick="changeColor('bandage-beige.jpg', this)"></button>
+    <button class="color-dot" style="background:#c4a27c;" onclick="changeColor('bandage-caramel.jpg', this)"></button>
+    <button class="color-dot" style="background:#ece3d8;" onclick="changeColor('bandage-cream.jpg', this)"></button>
+    <button class="color-dot" style="background:#9a826d;" onclick="changeColor('bandage-brown.jpg', this)"></button>
+  </div>
+</div>
 
       <div class="shop-block">
         <h3>Größe</h3>
@@ -360,6 +360,16 @@ Muskulatur, Fettgewebe oder X-Beine
       button.classList.add('active');
     });
   });
+</script>
+  <script>
+  function changeColor(imageName, element) {
+    document.getElementById('mainProductImage').src = imageName;
+
+    const colorButtons = document.querySelectorAll('.color-dot');
+    colorButtons.forEach(btn => btn.classList.remove('active'));
+
+    element.classList.add('active');
+  }
 </script>
 </body>
 </html>
