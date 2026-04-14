@@ -581,3 +581,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+.product-wear-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
